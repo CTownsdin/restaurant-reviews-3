@@ -228,7 +228,6 @@ createRestaurantHTML = restaurant => {
   name.innerHTML = restaurant.name
 
   const fav = document.createElement('div')
-  console.log(`IS_FAVORITE IS: ${restaurant.id} ${restaurant.is_favorite}`);
   if (restaurant.is_favorite) {
     fav.removeAttribute("class", "far fa-angry")
     fav.setAttribute("class", "far fa-smile")
