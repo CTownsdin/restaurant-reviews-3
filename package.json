@@ -4,12 +4,15 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^3.3.2",
+    "concurrently": "^4.0.1",
     "google-maps-react": "^2.0.2",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "react-scripts": "2.0.5"
   },
   "scripts": {
+    "dev": "concurrently \"npm run jsonServerStart\" \"npm run start\"",
+    "jsonServerStart": "cd jsonServer && npm run start",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

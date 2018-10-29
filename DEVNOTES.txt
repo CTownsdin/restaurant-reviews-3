@@ -2,11 +2,11 @@
 
 
 
-
----TODO:---------------------------------------------------------------------------
 [x] Get the basics running on the Main page.  copy over from prev project
 [x] Get the basics running on the Rest's page.  copy over from prev project
 [x] gmap marker links to restaurants - check that this is working.
+
+-----TODO:---------------------------------------------------------------------------
 
 [] Create RestaurantsContainer component.  Create a Restaurant fn component within the container comp't.
 
