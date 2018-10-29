@@ -1,0 +1,18 @@
+
+
+
+
+
+---TODO:---------------------------------------------------------------------------
+[x] Get the basics running on the Main page.  copy over from prev project
+[x] Get the basics running on the Rest's page.  copy over from prev project
+[x] gmap marker links to restaurants - check that this is working.
+
+[] Create RestaurantsContainer component.  Create a Restaurant fn component within the container comp't.
+
+[] favorite and unfavorite a restaurant, on main and on rest's page.
+
+
+
+
+[] todo, some JS bundle build process? :)
