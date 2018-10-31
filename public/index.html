@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,7 +14,6 @@
   <title>Restaurant Reviews</title>
 </head>
 
-
 <body>
   <header>
     <nav>
@@ -27,11 +25,13 @@
   
   <noscript>You need to enable JavaScript to run this app.</noscript>
 
-  <main id="maincontent">
+  <main id="main-content">
+    <!-- TODO: Reactify the map?  Maybe we don't have to do that part however.
     <section id="map-container">
       <div tabindex="0" id="map" role="application" aria-label="Map with restaurants"></div>
       <div id="app-map"></div>
     </section>
+
     <section>
       <div class="filter-options">
         <h2>Filter Results</h2>
@@ -56,9 +56,10 @@
       </div>
       <ul id="restaurants-list"></ul>
       <ul id="app-restaurants"></ul>
-    </section>
+    </section> -->
   </main>
-  <script type="application/javascript" charset="utf-8" src="js/bundle-main.js"></script>
+
+  <script type="application/javascript" charset="utf-8" src="js/new-main.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpPYmhjSFfGFY-nLn0G5CxCHp_IwfAaFU&libraries=places&callback=initMap"></script>
 
   <footer id="footer">

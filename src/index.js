@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AppRestaurants from './AppRestaurants';
+import AppMain from './AppMain';
 
-ReactDOM.render(<AppRestaurants />, document.getElementById('app-restaurants'));
+ReactDOM.render(<AppMain />, document.getElementById('main-content'));

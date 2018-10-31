@@ -8,6 +8,10 @@ let markers = []
 // const fetchRestaurantById = require('./shared').fetchRestaurantById
 // const getImageSourceSet = require('./shared').getImageSourceSet
 
+//  new-main should handle:
+// googleMap  -  only move to react if we HAVE to.
+// TODO: register the service worker  (?)  or more to react
+
 addMarkersToMap = (restaurants = self.restaurants) => {
   console.log('adding markers to map');
   restaurants.forEach(restaurant => {
