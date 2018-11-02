@@ -1,11 +1,13 @@
 import React, { Component, Fragment } from 'react'
-import Button from '@material-ui/core/Button';
+import Button from '@material-ui/core/Button'
 
-const restaurantsUrl = 'http://localhost:1337/restaurants';
+import Favorite from '@material-ui/icons/Favorite'
+import FavoriteBorder from '@material-ui/icons/FavoriteBorder'
+
+const restaurantsUrl = 'http://localhost:1337/restaurants'
 
 const Restaurant = ({ restaurant, handleViewDetails }) => {
   const { address, is_favorite, name, neighborhood, photograph } = restaurant
-
   return <Fragment>
     <div className='restaurant-container'>
       <div>
@@ -18,10 +20,13 @@ const Restaurant = ({ restaurant, handleViewDetails }) => {
       </div>
       <div className='restaurant-info'>
         <h2>{ name }</h2>
-        {/* TODO:  if is_favorite, then show fav, else show not fav */}
-        <div className='far fa-smile'>
-          <input type='hidden' value='1' />
-        </div>
+        
+        {/* TODO:  FIXME: OnClick, Change Favorite state */}
+        { is_favorite
+          ? <Favorite/>
+          : <FavoriteBorder/>
+        }
+        
         <p>{ neighborhood }</p>
         <p>{ address }</p>
         <a href='./restaurant.html?id=1'>View Details</a>

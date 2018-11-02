@@ -10,7 +10,8 @@ $ npm run dev   :) Yay!
 *** EPIC ***
 From the top down, rebuild all the JS code and put the functionality into the React app.***
 [] make the main content area part of react.
-
+  [] continue making the <Restaurant /> component
+  Make Toggling Favorites work.
 
 [] remove sw.js registration from new-main.js, and put it into react, whatever CRAs standard setup is.
 ************
