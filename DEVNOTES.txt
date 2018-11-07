@@ -4,47 +4,13 @@
 [x] Create RestaurantsContainer component.  
 [x] Create a Restaurant fn component within the container comp't.
 $ npm run dev   :) Yay!
-
+[x] put a restaurant on a card and a fixed size
+---^^^-DONE-^^^---------------------------------------------------------------------------
+Plans:
+  do most of the css inline, cause with react it is better that way.
 -----TODO: NEXT --------------------------------------------------------------------------
 
-*** EPIC ***
-From the top down, rebuild all the JS code and put the functionality into the React app.***
-[] make the main content area part of react.
-  [] continue making the <Restaurant /> component
-  Make Toggling Favorites work.
-
-[] remove sw.js registration from new-main.js, and put it into react, whatever CRAs standard setup is.
-************
+[x] display 1,2,3 or 4 restaurants per row depending on viewport width
 
 
-[x] Make the restaurant container exist with a temp background and see that it resizes correctly.
-  [] stop rendering the restaurants from the other JS code.
-      when it loads, do this...
-      fetchNeighborhoods()
-      fetchCuisines()
-      What part of this app needs to be in react and why?
-      All?  Some?  None?
-      maintaining the scripts bundling is a pain that goes away with react.
-      state is managed well by react.
-      state matters for liked restaurants, and fetching json, 
-      and can be used for the modal and the forms.
-      I don't think I have a choice, I can't really continue with this project
-      as it is.  JS changing the dom all the time is confusing as phuck.
-      and the bundling is garbage.
-      Let's rebuild the whole thing with react.
-      Let's keep it all within this project tho, bc copy paste between
-      2 projects won't go well, it never does.
-      remove all references to the JS script from the index.html file.
-
-
-[] Put the Restaurant on a peice of paper
-  animate a flip and expand on ViewDetails?? :)
-[] Make the restaurant click handler work, or style a link like a button using the material css classes
-  [] It should go to the right restaurant.
-[] favorite and unfavorite a restaurant, on main page, the UI should update properly.
-[] Fetch the restaurants to R'Container comp'state, dump json to the screen.
-[] Map over the comp'state rest's and display the list of Restaurant items.
-
-Restaurants Page
-[] fav and unfav a rest on rest's page.
 
