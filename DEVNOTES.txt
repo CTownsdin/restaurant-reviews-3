@@ -5,12 +5,36 @@
 [x] Create a Restaurant fn component within the container comp't.
 $ npm run dev   :) Yay!
 [x] put a restaurant on a card and a fixed size
+[x] display 1,2,3 or 4 restaurants per row depending on viewport width
+---MobX Notes-----------------------------
+@inject('MyStore')    works with the provider component, and decorates your
+  react component class, to put the store on the props.
+@observer   decorates your react component class such that it will dynamically
+  update with changes to mobx state
+to use an action as defined within the store class, simply access the store.action
+  from props
+@observable marks the state which should be observed
+@computed get FUNCTION    is a get fn defn inside the mobx store class and
+  it is used like a property within your react component
+<Provider /> component is imported from mob-react of course, and is given the store
+  as a prop, and then wraps the <AppMain /> component, and then thru react context
+  it provides the mobx store to all the child components.
+  In a CRA app, this is customarily handled in the src/index.js file.
+A store name should be capitalized, for ex  MyStore.
+------------------------------------------
+[x] fetch restaurants in the componentDidMount
+Plan-Idea: do most of the css inline for this project.
+
 ---^^^-DONE-^^^---------------------------------------------------------------------------
-Plans:
-  do most of the css inline, cause with react it is better that way.
 -----TODO: NEXT --------------------------------------------------------------------------
 
-[x] display 1,2,3 or 4 restaurants per row depending on viewport width
+use mobx for restaurants list.
+[] Continue the MobX video at 23mins, https://www.youtube.com/watch?v=Dp75-DnGFrU&t=1667s
+then, fetch the restaurants, and store them into the store
+  probably setup an @action inside the store class that will
+  do fetchRestaurants !
+
+
 
 
 

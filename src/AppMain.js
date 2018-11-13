@@ -1,5 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import { RestaurantsContainer } from './RestaurantsContainer'
+import DevTools from 'mobx-react-devtools'
+import {inject, observer} from 'mobx-react'
 
 // when it loads, do this...
 // fetchNeighborhoods()
@@ -7,9 +9,20 @@ import { RestaurantsContainer } from './RestaurantsContainer'
 //
 
 /* TODO: Reactify the map?  Maybe we don't have to do that part however. */
+// We can inject the restaurantStore in to <AppMain /> thanks to the provider
+@inject('restaurantStore')
+@observer
 class AppMain extends Component {
+
+  componentDidMount() {
+    this.props.restaurantStore.fetchRestaurants()
+  }
+
   render() {
+    const { restaurantStore } = this.props
+
     return <Fragment>
+      <DevTools />
       <section id="map-container">
         <div tabIndex="0" id="map" role="application" aria-label="Map with restaurants"></div>
         <div id="app-map"></div>
@@ -38,6 +51,10 @@ class AppMain extends Component {
             </select>
           </div>
         </div>
+    
+        <br/>
+        <br/>
+        <h2>There are {restaurantStore.restaurantsCount} restaurants</h2>
 
         <ul id="restaurants-list">
           <RestaurantsContainer />

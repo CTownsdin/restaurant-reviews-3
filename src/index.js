@@ -1,5 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import AppMain from './AppMain';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import AppMain from './AppMain'
 
-ReactDOM.render(<AppMain />, document.getElementById('main-content'));
+import restaurantStore from './stores/RestaurantStore'
+import { Provider } from 'mobx-react'
+
+const Root = (
+  <Provider restaurantStore={restaurantStore}>
+    <AppMain />
+  </Provider>
+)
+
+ReactDOM.render(Root, document.getElementById('main-content'))
