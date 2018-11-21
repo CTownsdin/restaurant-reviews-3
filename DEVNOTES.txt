@@ -28,13 +28,22 @@ Plan-Idea: do most of the css inline for this project.
 ---^^^-DONE-^^^---------------------------------------------------------------------------
 -----TODO: NEXT --------------------------------------------------------------------------
 
-use mobx for restaurants list.
-[] Continue the MobX video at 23mins, https://www.youtube.com/watch?v=Dp75-DnGFrU&t=1667s
-then, fetch the restaurants, and store them into the store
-  probably setup an @action inside the store class that will
-  do fetchRestaurants !
+GOAL: Make the 'All Areas' and 'All Cuisines' selectors work.
+[] populate the selectors with the selections
+PLAN:  onSelection, call @actions defn'd within mobx store which
+  change the selected value
+  [] Move the selectors into the restaurants container.
+
+  
+utils.js
+function fetchRestaurantByCuisine(cuisine, callback) {
+and the other similar fns
+
+  [] created an observeable state called RestaurantsFilteredSelection
+  [] create actions which change what is in RestaurantsFilteredSelection
+  [] display the RestaurantsFilteredSelection list in the view
 
 
-
+Clean Up the JS files and bundles, which are still needed?  remove the rest.
 
 
