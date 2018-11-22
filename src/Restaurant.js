@@ -8,6 +8,22 @@ export class Restaurant extends Component {
   constructor(props) {
     super(props)
     this.state = {}
+    this.getImageAltText = this.getImageAltText.bind(this)
+  }
+  getImageAltText(id) {
+    const altTexts = {
+      '1': 'bustling dining room with chandeliers',
+      '2': 'mozzarella cheese pizza with bubbly crust',
+      '3': 'dining room styled with wooden and lots of stainless steel',
+      '4': 'artistic photo of brick building shot from the corner exterior sidewalk',
+      '5': 'cook smiles while overlooking a busy cozy scene',
+      '6': 'a rustic dining room in a converted warehouse, with a large US flag decoration',
+      '7': 'black and white photo of concrete textured frontage of Superiority Burger joint',
+      '8': 'building with awning and sign above says the DUTCH',
+      '9': 'people casually eating and drinking water, beer, and wine, some browse on cellphones',
+      '10': 'modern white and chrome styled eating bar and seating area'
+    }
+    return altTexts[String(id)];
   }
 
   render() {
@@ -27,8 +43,7 @@ export class Restaurant extends Component {
             srcSet={`http://localhost:3000/img/${photograph}-500px.jpg 500w,
               http://localhost:3000/img/${photograph}-1000px.jpg 1000w,
               http://localhost:3000/img/${photograph}-1500px.jpg 1500w`}
-            alt='bustling dining room with chandeliers' />
-            {/* TODO: Fix alt text! */}
+            alt={this.getImageAltText(id)} />
         </div>
         <div className='restaurant-info'>
           <h2>{name}</h2>
