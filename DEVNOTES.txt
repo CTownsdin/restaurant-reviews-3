@@ -14,9 +14,8 @@ $ npm run dev   :) Yay!
 ---^^^-DONE-^^^---------------------------------------------------------------------------
 -----TODO: NEXT --------------------------------------------------------------------------
 
+[] Use a mobx obserable, and computed value, for the restaurants and favoriting them!
 [] implement favoriting restaurants
-
-
 
 ---MobX Notes-----------------------------
 @inject('MyStore')    works with the provider component, and decorates your

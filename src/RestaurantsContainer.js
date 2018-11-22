@@ -52,9 +52,6 @@ export class RestaurantsContainer extends Component {
         selectedRestaurants: json
       }))
   }
-  handleViewDetails = (e) => {
-    alert('clicked', e.target)
-  }
   componentDidMount() {
     this.fetchRestaurants()
   }
@@ -101,9 +98,7 @@ export class RestaurantsContainer extends Component {
       <ul id="restaurants-list">
         <div className='restaurants-list' style={styles} >
           {selectedRestaurants.map((r, i) =>
-            <Restaurant key={i}
-              restaurant={r}
-              handleViewDetails={this.handleViewDetails} />
+            <Restaurant key={i} restaurant={r} />
           )}
         </div>
       </ul>
