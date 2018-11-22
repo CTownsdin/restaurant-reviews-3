@@ -21,7 +21,7 @@
           "Sunday": "12:00 pm - 4:00 pm, 5:30 pm - 11:00 pm"
         },
         "createdAt": 1504095563444,
-        "updatedAt": "2018-11-22T04:26:37.049Z",
+        "updatedAt": "2018-11-22T21:46:41.607Z",
         "id": 1,
         "is_favorite": "false"
       },
@@ -45,8 +45,8 @@
           "Sunday": "12:00 pm - 3:00 pm, 5:00 pm - 11:00 pm"
         },
         "createdAt": 1504095568414,
-        "updatedAt": "2018-11-22T04:27:07.805Z",
-        "is_favorite": "false",
+        "updatedAt": "2018-11-22T21:46:43.350Z",
+        "is_favorite": "true",
         "id": 2
       },
       {
@@ -69,9 +69,9 @@
           "Sunday": "11:30 am - 2:00 am"
         },
         "createdAt": 1504095571434,
-        "updatedAt": "2018-11-02T21:54:53.100Z",
+        "updatedAt": "2018-11-22T21:46:44.981Z",
         "id": 3,
-        "is_favorite": "notFavorite"
+        "is_favorite": "false"
       },
       {
         "name": "Katz's Delicatessen",
@@ -93,8 +93,8 @@
           "Sunday": "Sat - 10:30 pm"
         },
         "createdAt": 1504095567091,
-        "updatedAt": "2018-11-02T21:55:17.921Z",
-        "is_favorite": "favorite",
+        "updatedAt": "2018-11-22T21:46:48.137Z",
+        "is_favorite": "true",
         "id": 4
       },
       {
@@ -117,8 +117,8 @@
           "Sunday": "10:00 am - 12:00 am"
         },
         "createdAt": 1504095567071,
-        "updatedAt": "2018-11-02T21:54:56.712Z",
-        "is_favorite": "notFavorite",
+        "updatedAt": "2018-11-22T21:46:49.263Z",
+        "is_favorite": "true",
         "id": 5
       },
       {
@@ -141,8 +141,8 @@
           "Sunday": "12:00 pm - 9:00 pm"
         },
         "createdAt": 1504095567071,
-        "updatedAt": "2018-11-02T21:55:21.779Z",
-        "is_favorite": "favorite",
+        "updatedAt": "2018-11-22T21:46:51.494Z",
+        "is_favorite": "false",
         "id": 6
       },
       {
@@ -165,8 +165,8 @@
           "Sunday": "11:30 am - 10:00 pm"
         },
         "createdAt": 1504095567091,
-        "updatedAt": "2018-11-02T21:55:00.167Z",
-        "is_favorite": "notFavorite",
+        "updatedAt": "2018-11-22T21:46:55.042Z",
+        "is_favorite": "true",
         "id": 7
       },
       {
@@ -189,8 +189,8 @@
           "Sunday": "10:00 am - 3:00 pm, 5:30 pm - 11:00 pm"
         },
         "createdAt": 1504095567091,
-        "updatedAt": "2018-11-02T21:55:25.849Z",
-        "is_favorite": "favorite",
+        "updatedAt": "2018-11-22T21:46:56.049Z",
+        "is_favorite": "true",
         "id": 8
       },
       {
@@ -213,8 +213,8 @@
           "Sunday": "5:00 pm - 10:00 pm"
         },
         "createdAt": 1504095567191,
-        "updatedAt": "2018-11-02T21:55:04.496Z",
-        "is_favorite": "notFavorite",
+        "updatedAt": "2018-11-22T21:46:57.650Z",
+        "is_favorite": "false",
         "id": 9
       },
       {
@@ -236,8 +236,8 @@
           "Sunday": "11:00 am - 12:00 am"
         },
         "createdAt": 1504095567183,
-        "updatedAt": "2018-11-02T21:55:31.987Z",
-        "is_favorite": "favorite",
+        "updatedAt": "2018-11-22T21:47:00.519Z",
+        "is_favorite": "false",
         "id": 10
       }
     ],

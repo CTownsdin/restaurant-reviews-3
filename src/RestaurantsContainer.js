@@ -98,7 +98,10 @@ export class RestaurantsContainer extends Component {
       <ul id="restaurants-list">
         <div className='restaurants-list' style={styles} >
           {selectedRestaurants.map((r, i) =>
-            <Restaurant key={i} restaurant={r} />
+            <Restaurant key={i} 
+              restaurant={r}
+              refetchRestaurants={this.fetchRestaurants}
+            />
           )}
         </div>
       </ul>

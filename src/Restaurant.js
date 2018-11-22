@@ -23,7 +23,7 @@ export class Restaurant extends Component {
   handleToggleFav = (id, toggleTo) => {
     const url = `http://localhost:1337/restaurants/${id}/?is_favorite=${toggleTo}`;
     fetch(url, { method: 'PUT'})
-    // TODO: splic the fix into state ?? // Did the view update?
+      .then(() => this.props.refetchRestaurants())
   }
   render() {
     const { address, is_favorite, name, neighborhood, photograph, id } = this.props.restaurant
@@ -46,7 +46,7 @@ export class Restaurant extends Component {
         </div>
         <div className='restaurant-info'>
           <h2>{name}</h2>
-          {(Boolean(is_favorite) === true)
+          {is_favorite === 'true'
             ? <Favorite onClick={() => this.handleToggleFav(id, false)} />
             : <FavoriteBorder onClick={() => this.handleToggleFav(id, true)} />
           }
