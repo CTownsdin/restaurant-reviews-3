@@ -1,22 +1,3 @@
-[x] Get the basics running on the Main page.
-[x] Get the basics running on the Rest's page.
-[x] gmap marker links to restaurants working.
-[x] Create RestaurantsContainer component.  
-[x] Create a Restaurant fn component within the container comp't.
-$ npm run dev   :) Yay!
-[x] put a restaurant on a card and a fixed size
-[x] display 1,2,3 or 4 restaurants per row depending on viewport width
-[x] Make the 'All Areas' and 'All Cuisines' selectors work.
-  [x] populate the selectors with the selections
-  [x] filter state restaurants onSelection
-[x] Fix the View Details links
-[x] fix the image alt texts
----^^^-DONE-^^^---------------------------------------------------------------------------
------TODO: NEXT --------------------------------------------------------------------------
-
-[] Use a mobx obserable, and computed value, for the restaurants and favoriting them!
-[] implement favoriting restaurants
-
 ---MobX Notes-----------------------------
 @inject('MyStore')    works with the provider component, and decorates your
   react component class, to put the store on the props.
@@ -32,4 +13,32 @@ to use an action as defined within the store class, simply access the store.acti
   it provides the mobx store to all the child components.
   In a CRA app, this is customarily handled in the src/index.js file.
 A store name should be capitalized, for ex  MyStore.
+----
+Not using mobx at this time, don't need it at the moment,
+as component state is sufficient for this simple app.
 -------------------------------------------
+[x] Get the basics running on the Main page.
+[x] Get the basics running on the Rest's page.
+[x] gmap marker links to restaurants working.
+[x] Create RestaurantsContainer component.  
+[x] Create a Restaurant fn component within the container comp't.
+$ npm run dev   :) Yay!
+[x] put a restaurant on a card and a fixed size
+[x] display 1,2,3 or 4 restaurants per row depending on viewport width
+[x] Make the 'All Areas' and 'All Cuisines' selectors work.
+  [x] populate the selectors with the selections
+  [x] filter state restaurants onSelection
+[x] Fix the View Details links
+[x] fix the image alt texts
+[x] implement favoriting restaurants
+---^^^-DONE-^^^---------------------------------------------------------------------------
+-----TODO: NEXT --------------------------------------------------------------------------
+
+[x] App Data Source
+---Rubric_2--- pass the requirements. @https://review.udacity.com/#!/rubrics/1131/view
+[] Works offline, data is cached using IndexedDB API.
+  Review, How does Wittr use the IndexedDB API to cache wittrs?
+  Then, Do the same in RestaurantReviews.
+    [x] added in the default serviceWorker implementation as provided by CRA
+
+Rubric #3, pass the requirements.

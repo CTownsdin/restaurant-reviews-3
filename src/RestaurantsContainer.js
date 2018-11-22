@@ -3,7 +3,6 @@ import { Restaurant } from './Restaurant'
 
 const restaurantsUrl = 'http://localhost:1337/restaurants'
 
-
 export class RestaurantsContainer extends Component {
   constructor(props) {
     super(props)
@@ -107,7 +106,6 @@ export class RestaurantsContainer extends Component {
       </ul>
 
     </section>
-
   }
 }
 
