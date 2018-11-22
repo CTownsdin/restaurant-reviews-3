@@ -15,11 +15,11 @@ export class Restaurant extends Component {
     let styles = {
       width: '400px',
       height: '500px',
-      margin: '2px',
+      margin: '4px',
       textAlign: 'center',
     }
 
-    return <Paper elevation={3} style={styles} >
+    return <Paper elevation={4} style={styles} >
       <div className='restaurant-container'>
         <div>
           <img className='restaurant-img'
@@ -28,6 +28,7 @@ export class Restaurant extends Component {
               http://localhost:3000/img/${photograph}-1000px.jpg 1000w,
               http://localhost:3000/img/${photograph}-1500px.jpg 1500w`}
             alt='bustling dining room with chandeliers' />
+            {/* TODO: Fix alt text! */}
         </div>
         <div className='restaurant-info'>
           <h2>{name}</h2>
@@ -37,9 +38,8 @@ export class Restaurant extends Component {
           }
           <p>{neighborhood}</p>
           <p>{address}</p>
-          {/* <a href='./restaurant.html?id=1'>View Details</a> TODO: make button work instead of this */}
-          <Button variant='contained' color='primary' onClick={() => alert(`imagine handleViewDetails button click`)}>
-            View Details
+          <Button variant='contained' color='primary'>
+            <a href={`http://localhost:3000/restaurant.html?id=${id}`}>View Details</a>
           </Button>
         </div>
       </div>

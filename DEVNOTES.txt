@@ -6,6 +6,9 @@
 $ npm run dev   :) Yay!
 [x] put a restaurant on a card and a fixed size
 [x] display 1,2,3 or 4 restaurants per row depending on viewport width
+[x] Make the 'All Areas' and 'All Cuisines' selectors work.
+  [x] populate the selectors with the selections
+  [x] filter state restaurants onSelection
 ---MobX Notes-----------------------------
 @inject('MyStore')    works with the provider component, and decorates your
   react component class, to put the store on the props.
@@ -28,8 +31,10 @@ Plan-Idea: do most of the css inline for this project.
 ---^^^-DONE-^^^---------------------------------------------------------------------------
 -----TODO: NEXT --------------------------------------------------------------------------
 
-GOAL: Make the 'All Areas' and 'All Cuisines' selectors work.
-[x] populate the selectors with the selections
-[] filter state restaurants onSelection
+Do the restaurant details pages work via url?
+What is the URL supposed to be? Check version 2 of the project.
+// http://localhost:9999/restaurant.html?id=1
+http://localhost:3000/restaurant.html?id=1
 
+Hook up the View Details buttons to the details page.
 

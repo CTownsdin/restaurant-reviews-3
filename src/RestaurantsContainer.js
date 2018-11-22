@@ -21,7 +21,6 @@ export class RestaurantsContainer extends Component {
     this.handleCuisineSelection = this.handleCuisineSelection.bind(this)
   }
   handleAreaSelection(e) {
-    alert(e.target.value)
     const { restaurants, selectedCuisine } = this.state
     const newAreaSelection = e.target.value
     let filtered = restaurants
@@ -37,7 +36,6 @@ export class RestaurantsContainer extends Component {
     this.setState({ selectedRestaurants: filtered, selectedArea: newAreaSelection })
   }
   handleCuisineSelection(e) {
-    alert(e.target.value)
     const { restaurants, selectedArea } = this.state
     const newCuisineSelection = e.target.value
     let filtered = restaurants
