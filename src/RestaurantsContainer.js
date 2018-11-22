@@ -13,14 +13,8 @@ export class RestaurantsContainer extends Component {
       selectedArea: 'all',
       selectedCuisine: 'all',
     }
-    this.fetchRestaurants = this.fetchRestaurants.bind(this)
-    this.handleViewDetails = this.handleViewDetails.bind(this)
-    this.favorite = this.favorite.bind(this)
-    this.unFavorite = this.unFavorite.bind(this)
-    this.handleAreaSelection = this.handleAreaSelection.bind(this)
-    this.handleCuisineSelection = this.handleCuisineSelection.bind(this)
   }
-  handleAreaSelection(e) {
+  handleAreaSelection = (e) => {
     const { restaurants, selectedCuisine } = this.state
     const newAreaSelection = e.target.value
     let filtered = restaurants
@@ -35,7 +29,7 @@ export class RestaurantsContainer extends Component {
     }
     this.setState({ selectedRestaurants: filtered, selectedArea: newAreaSelection })
   }
-  handleCuisineSelection(e) {
+  handleCuisineSelection = (e) => {
     const { restaurants, selectedArea } = this.state
     const newCuisineSelection = e.target.value
     let filtered = restaurants
@@ -50,7 +44,7 @@ export class RestaurantsContainer extends Component {
     }
     this.setState({ selectedRestaurants: filtered, selectedCuisine: newCuisineSelection })
   }
-  fetchRestaurants() {
+  fetchRestaurants = () => {
     fetch(restaurantsUrl)
       .then(response => response.json())
       .then(json => this.setState({
@@ -58,23 +52,11 @@ export class RestaurantsContainer extends Component {
         selectedRestaurants: json
       }))
   }
-  handleViewDetails(e) {
+  handleViewDetails = (e) => {
     alert('clicked', e.target)
   }
   componentDidMount() {
     this.fetchRestaurants()
-  }
-  favorite(id) {
-    const favURL = `${restaurantsUrl}/${id}/?is_favorite=favorite`
-    fetch(favURL, { method: 'PUT' })
-      .then(() => this.fetchRestaurants)
-      .catch(err => console.error('Error favoriting restaurant', err))
-  }
-  unFavorite(id) {
-    const favURL = `${restaurantsUrl}/${id}/?is_favorite=notFavorite`
-    fetch(favURL, { method: 'PUT' })
-      .then(() => this.fetchRestaurants)
-      .catch(err => console.error('Error unfavoriting restaurant', err))
   }
   render() {
     const { selectedRestaurants } = this.state
@@ -121,8 +103,6 @@ export class RestaurantsContainer extends Component {
           {selectedRestaurants.map((r, i) =>
             <Restaurant key={i}
               restaurant={r}
-              favorite={this.favorite}
-              unFavorite={this.unFavorite}
               handleViewDetails={this.handleViewDetails} />
           )}
         </div>
