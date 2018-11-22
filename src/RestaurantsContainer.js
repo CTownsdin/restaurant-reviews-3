@@ -9,16 +9,56 @@ export class RestaurantsContainer extends Component {
     super(props)
     this.state = {
       restaurants: [],
+      selectedRestaurants: [],
+      selectedArea: 'all',
+      selectedCuisine: 'all',
     }
     this.fetchRestaurants = this.fetchRestaurants.bind(this)
     this.handleViewDetails = this.handleViewDetails.bind(this)
     this.favorite = this.favorite.bind(this)
     this.unFavorite = this.unFavorite.bind(this)
+    this.handleAreaSelection = this.handleAreaSelection.bind(this)
+    this.handleCuisineSelection = this.handleCuisineSelection.bind(this)
+  }
+  handleAreaSelection(e) {
+    alert(e.target.value)
+    const { restaurants, selectedCuisine } = this.state
+    const newAreaSelection = e.target.value
+    let filtered = restaurants
+    if (selectedCuisine !== 'all') {
+      filtered = restaurants.filter(r => r.cuisine_type === selectedCuisine)
+    }
+    if (newAreaSelection !== 'all') {
+      filtered = filtered.filter(r => r.neighborhood === newAreaSelection)
+    }
+    if ((selectedCuisine === 'all') && (newAreaSelection === 'all')) {
+      filtered = restaurants
+    }
+    this.setState({ selectedRestaurants: filtered, selectedArea: newAreaSelection })
+  }
+  handleCuisineSelection(e) {
+    alert(e.target.value)
+    const { restaurants, selectedArea } = this.state
+    const newCuisineSelection = e.target.value
+    let filtered = restaurants
+    if (selectedArea !== 'all') {
+      filtered = restaurants.filter(r => r.neighborhood === selectedArea)
+    }
+    if (newCuisineSelection !== 'all') {
+      filtered = filtered.filter(r => r.cuisine_type === newCuisineSelection)
+    }
+    if ((selectedArea === 'all') && (newCuisineSelection === 'all')) {
+      filtered = restaurants
+    }
+    this.setState({ selectedRestaurants: filtered, selectedCuisine: newCuisineSelection })
   }
   fetchRestaurants() {
     fetch(restaurantsUrl)
       .then(response => response.json())
-      .then(json => this.setState({ restaurants: json }))
+      .then(json => this.setState({
+        restaurants: json,
+        selectedRestaurants: json
+      }))
   }
   handleViewDetails(e) {
     alert('clicked', e.target)
@@ -39,7 +79,7 @@ export class RestaurantsContainer extends Component {
       .catch(err => console.error('Error unfavoriting restaurant', err))
   }
   render() {
-    const { restaurants } = this.state
+    const { selectedRestaurants } = this.state
     let styles = {
       display: 'flex',
       flexWrap: 'wrap',
@@ -65,9 +105,13 @@ export class RestaurantsContainer extends Component {
             id="cuisines-select"
             name="cuisines"
             aria-label="select type of cuisine"
-          // onChange="updateRestaurants()" TODO: FIXME:
+            onChange={this.handleCuisineSelection}
           >
             <option value="all">All Cuisines</option>
+            <option value="Pizza">Pizza</option>
+            <option value="American">American</option>
+            <option value="Asian">Asian</option>
+            <option value="Mexican">Mexican</option>
           </select>
         </div>
       </div>
@@ -76,7 +120,7 @@ export class RestaurantsContainer extends Component {
 
       <ul id="restaurants-list">
         <div className='restaurants-list' style={styles} >
-          {restaurants.map((r, i) =>
+          {selectedRestaurants.map((r, i) =>
             <Restaurant key={i}
               restaurant={r}
               favorite={this.favorite}

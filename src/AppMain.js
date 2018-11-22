@@ -12,17 +12,8 @@ import {inject, observer} from 'mobx-react'
 @inject('restaurantStore')
 @observer
 class AppMain extends Component {
-  constructor(props){
-    super(props)
-    this.handleAreaSelection = this.handleAreaSelection.bind(this)
-  }
   componentDidMount() {
     this.props.restaurantStore.fetchRestaurants()
-  }
-  handleAreaSelection(e) {
-    alert(e.target.value)
-    // onChange, filter the restaurants which are given to the 
-    // rest's list by area
   }
   render() {
 
