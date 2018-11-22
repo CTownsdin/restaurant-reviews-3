@@ -10,6 +10,14 @@ $ npm run dev   :) Yay!
   [x] populate the selectors with the selections
   [x] filter state restaurants onSelection
 [x] Fix the View Details links
+[x] fix the image alt texts
+---^^^-DONE-^^^---------------------------------------------------------------------------
+-----TODO: NEXT --------------------------------------------------------------------------
+
+[] implement favoriting restaurants
+
+
+
 ---MobX Notes-----------------------------
 @inject('MyStore')    works with the provider component, and decorates your
   react component class, to put the store on the props.
@@ -25,14 +33,4 @@ to use an action as defined within the store class, simply access the store.acti
   it provides the mobx store to all the child components.
   In a CRA app, this is customarily handled in the src/index.js file.
 A store name should be capitalized, for ex  MyStore.
-------------------------------------------
-[x] fetch restaurants in the componentDidMount
-Plan-Idea: do most of the css inline for this project.
-
----^^^-DONE-^^^---------------------------------------------------------------------------
------TODO: NEXT --------------------------------------------------------------------------
-
-[] fix the image alt texts
-
-Hook up the View Details buttons to the details page.
-
+-------------------------------------------

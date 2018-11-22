@@ -5,12 +5,7 @@ import FavoriteBorder from '@material-ui/icons/FavoriteBorder'
 import Paper from '@material-ui/core/Paper';
 
 export class Restaurant extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {}
-    this.getImageAltText = this.getImageAltText.bind(this)
-  }
-  getImageAltText(id) {
+  getImageAltText = (id) => {
     const altTexts = {
       '1': 'bustling dining room with chandeliers',
       '2': 'mozzarella cheese pizza with bubbly crust',
@@ -25,7 +20,11 @@ export class Restaurant extends Component {
     }
     return altTexts[String(id)];
   }
-
+  handleToggleFav = (id, toggleTo) => {
+    const url = `http://localhost:1337/restaurants/${id}/?is_favorite=${toggleTo}`;
+    fetch(url, { method: 'PUT'})
+    // TODO: splic the fix into state ?? // Did the view update?
+  }
   render() {
     const { address, is_favorite, name, neighborhood, photograph, id } = this.props.restaurant
     let styles = {
@@ -47,9 +46,9 @@ export class Restaurant extends Component {
         </div>
         <div className='restaurant-info'>
           <h2>{name}</h2>
-          {(is_favorite === 'favorite')
-            ? <Favorite onClick={() => alert(`imagine unfavorite ${id}`)} />
-            : <FavoriteBorder onClick={() => alert(`imagine favorite ${id}`)} />
+          {(Boolean(is_favorite) === true)
+            ? <Favorite onClick={() => this.handleToggleFav(id, false)} />
+            : <FavoriteBorder onClick={() => this.handleToggleFav(id, true)} />
           }
           <p>{neighborhood}</p>
           <p>{address}</p>
