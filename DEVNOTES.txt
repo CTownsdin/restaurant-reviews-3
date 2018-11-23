@@ -31,14 +31,21 @@ $ npm run dev   :) Yay!
 [x] Fix the View Details links
 [x] fix the image alt texts
 [x] implement favoriting restaurants
+[x] App Data Source
 ---^^^-DONE-^^^---------------------------------------------------------------------------
 -----TODO: NEXT --------------------------------------------------------------------------
 
-[x] App Data Source
 ---Rubric_2--- pass the requirements. @https://review.udacity.com/#!/rubrics/1131/view
-[] Works offline, data is cached using IndexedDB API.
-  Review, How does Wittr use the IndexedDB API to cache wittrs?
-  Then, Do the same in RestaurantReviews.
-    [x] added in the default serviceWorker implementation as provided by CRA
+GOAL: In order to pass rubric 2, we must be able to load the page, click around, go offline, and do the same clicks.
+  [x] added in a CRA style service worker in sw.js.
+  
+  GOAL: Use Workbox to setup a service worker. So rr's works offline as required.
+    Configure Wb like I did in the workbox-lab codelab using a workbox-config.js file to precache routes
+      and setup more routes using workbox.strategies, as necessary, for other things more specifically.
+  
+  Try to do this without ejecting from CRA.
+  If it doesn't work without ejecting, then eject from CRA, and then use Workbox, to setup the SW,
+    and get this restaurant reviews app working offline.
+  
 
 Rubric #3, pass the requirements.

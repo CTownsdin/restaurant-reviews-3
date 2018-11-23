@@ -23,16 +23,6 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   })
 }
 
-function registerServiceWorker() {
-  if (!navigator.serviceWorker) return;
-  navigator.serviceWorker.register('../sw.js').then(function(registration) {
-    console.log(`SW registration successful with scope: ${registration.scope}`);
-  }).catch(function() {
-    console.log('Registration failed!');
-  });
-}
-
-registerServiceWorker() // sw gets registered right here in main.js
 
 /**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
